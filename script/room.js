@@ -3,11 +3,11 @@
  */
 var Room = {
 	// times in (minutes * seconds * milliseconds)
-	_FIRE_COOL_DELAY: 5 * 60 * 1000, // time after a stoke before the fire cools
-	_ROOM_WARM_DELAY: 30 * 1000, // time between room temperature updates
-	_BUILDER_STATE_DELAY: 0.5 * 60 * 1000, // time between builder state updates
-	_STOKE_COOLDOWN: 10, // cooldown to stoke the fire
-	_NEED_WOOD_DELAY: 15 * 1000, // from when the stranger shows up, to when you need wood
+	_FIRE_COOL_DELAY: 2*1000, // time after a stoke before the fire cools
+	_ROOM_WARM_DELAY: 1000, // time between room temperature updates
+	_BUILDER_STATE_DELAY: 0.5 * 1000, // time between builder state updates
+	_STOKE_COOLDOWN: 1, // cooldown to stoke the fire
+	_NEED_WOOD_DELAY: 10*1000, // from when the stranger shows up, to when you need wood
 	
 	buttons:{},
 	
@@ -251,7 +251,7 @@ var Room = {
 			buildMsg: _('the convoy can haul mostly everything'),
 			cost: function() {
 				return {
-					'wood': 1000,
+					'wood': 700,
 					'iron': 200,
 					'steel': 100
 				};
@@ -462,14 +462,6 @@ var Room = {
 		);
 		
 		Room.pathDiscovery = Boolean($SM.get('stores["compass"]'));
-
-		if(Engine._debug) {
-			this._ROOM_WARM_DELAY = 5000;
-			this._BUILDER_STATE_DELAY = 5000;
-			this._STOKE_COOLDOWN = 0;
-			this._NEED_WOOD_DELAY = 5000;
-		}
-		
 		if(typeof $SM.get('features.location.room') == 'undefined') {
 			$SM.set('features.location.room', true);
 			$SM.set('game.builder.level', -1);
