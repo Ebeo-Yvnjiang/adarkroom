@@ -288,8 +288,8 @@ var Room = {
 			buildMsg: _("steel's stronger than iron"),
 			cost: function() {
 				return {
-					'leather': 200,
-					'steel': 100
+					'leather': 100,
+					'steel': 5
 				};
 			}
 		},
