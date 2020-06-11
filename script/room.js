@@ -440,8 +440,8 @@ var Room = {
 			maximum: 1,
 			cost: function() {
 				return { 
-					fur: 400, 
-					scales: 20, 
+					fur: 40, 
+					scales: 10, 
 					teeth: 10 
 				};
 			}
