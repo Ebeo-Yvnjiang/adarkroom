@@ -2,8 +2,8 @@
  * Module that registers the starship!
  */
 var Ship = {
-	LIFTOFF_COOLDOWN: 120,
-	ALLOY_PER_HULL: 1,
+	LIFTOFF_COOLDOWN: 12,
+	ALLOY_PER_HULL: 100,
 	ALLOY_PER_THRUSTER: 1,
 	BASE_HULL: 0,
 	BASE_THRUSTERS: 1,
