@@ -202,7 +202,7 @@ var Room = {
 			cost: function() {
 				return {
 					'iron': 60,
-					'steel': 50
+					'steel': 2
 				};
 			}
 		},
@@ -289,7 +289,7 @@ var Room = {
 			cost: function() {
 				return {
 					'leather': 100,
-					'steel': 5
+					'steel': 1
 				};
 			}
 		},
