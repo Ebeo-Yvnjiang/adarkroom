@@ -549,7 +549,7 @@ var Room = {
 		if($SM.get('game.builder.level') == 3) {
 			$SM.add('game.builder.level', 1);
 			$SM.setIncome('builder', {
-				delay: 10,
+				delay: 5,
 				stores: {'wood' : 2 }
 			});
 			Room.updateIncomeView();
